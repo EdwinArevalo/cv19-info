@@ -7,7 +7,7 @@ if(isset($_POST['guardar_articulo'])){
     $precio = $_POST['precio'];
     $stock = $_POST['stock'];
 
-    $query = "INSERT INTO articulos(nombre, precio, stock) VALUES('$nombre',$precio,$stock)";
+    $query = "INSERT INTO articulo(nombre, precio, stock) VALUES('$nombre',$precio,$stock)";
     $result = mysqli_query($conn, $query);
 
     if(!$result){

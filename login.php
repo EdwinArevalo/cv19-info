@@ -6,7 +6,7 @@
         $usuario = $_POST['usuario'];
         $clave = $_POST['clave'];
 
-        $query = "SELECT * FROM usuarios where usuario = '$usuario' AND clave = '$clave' ";
+        $query = "SELECT * FROM empleados where usuario = '$usuario' AND clave = '$clave' ";
         $result = mysqli_query($conn, $query);
 
         $count = mysqli_num_rows($result);

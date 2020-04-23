@@ -5,7 +5,7 @@ include('db.php');
 $search = $_POST['search'];
 
 if(!empty($search)){
-    $query = "SELECT * FROM articulos WHERE nombre LIKE '$search%' ";
+    $query = "SELECT * FROM articulo WHERE nombre LIKE '$search%' ";
     $resultado = mysqli_query($conn, $query);
     if(!$resultado){
         die('Query Error'.mysql_error($conn));

@@ -60,7 +60,7 @@
                 
                 <tbody>
                 <?php
-                        $query = "SELECT * FROM articulos";
+                        $query = "SELECT * FROM articulo";
                         $result = mysqli_query($conn, $query);
                 while($row = mysqli_fetch_array($result)){ ?>
                     <tr>

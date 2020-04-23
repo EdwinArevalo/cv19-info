@@ -3,7 +3,7 @@
 
     if(isset($_GET['id'])){
         $id = $_GET['id'];
-        $query = "SELECT * FROM articulos WHERE id = '$id' ";
+        $query = "SELECT * FROM articulo WHERE id = '$id' ";
         $result = mysqli_query($conn,$query);
         //if(mysqli_num_rows($result) == 1){
             $row = mysqli_fetch_array($result);
@@ -17,7 +17,7 @@
         $precio = $_POST['precio'];
         $stock = $_POST['stock'];
 
-        $query = "UPDATE articulos set nombre = '$nombre', precio = $precio, stock = $stock WHERE id = $id ";
+        $query = "UPDATE articulo set nombre = '$nombre', precio = $precio, stock = $stock WHERE id = $id ";
         mysqli_query($conn, $query);
         $_SESSION['message'] = 'Artículo actualizado satisfactoriamente';
         $_SESSION['message_type'] = 'warning';
