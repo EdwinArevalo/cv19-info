@@ -20,9 +20,10 @@
     
     <ul class="navbar-nav ml-auto">
         <form class="form-inline my-2 my-lg-0">
-        <input type="search" id="search" class="form-control mr-sm-2" placeholder="Buscar un artículo">
-        <button class="btn btn-danger my-2 my-sm-0" type="submit"> Buscar</button>
+        <input type="search" id="search" class="form-control mr-sm-2" placeholder="Buscar por nombre">
+        <button class="btn btn-success my-2 my-sm-0" type="submit"> Buscar</button>
         </form>
     </ul>
     </div>
+    <a href="index.php"><button class="btn btn-danger my-2 my-sm-0" type="submit"> Salir</button></a>
 </nav>

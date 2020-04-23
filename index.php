@@ -9,9 +9,10 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>App</title>
     <link rel="icon" type="image/png" href="https://i.blogs.es/82a22b/fbca226b-3a49-4aa4-9351-31dd115780bb/450_1000.png" />
-    <link rel="stylesheet" href="https://bootswatch.com/4/journal/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <div class="container my-4">
-
+    </head>
+    <body>
             <h1 style="color: red; text-align: center">ARTÍCULOS</h1>
 
         <div class="row pt-5">
@@ -43,8 +44,8 @@ session_start();
 
         </div>
     </div>
-</head>
-<body>
+
+
     
 </body>
 </html>
