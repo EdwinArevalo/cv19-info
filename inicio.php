@@ -15,8 +15,13 @@
                     </button>
                 </div>
 
-            <?php } ?>
+            <?php session_destroy(); } ?>
 
+
+                <div class="card">
+            <div class="card-header">
+                        <h4>Añadir un artículo</h4>
+                    </div>
             <div class="card card-body">
                 <form action="save.php" method="POST">
                     <div class="form-group">
@@ -30,7 +35,10 @@
                     </div>
                     <input type="submit" class="btn btn-success btn-block" name="guardar_articulo" value="Guardar articulo">
                 </form>
+            
+                </div>
             </div>
+
         </div>
 
 

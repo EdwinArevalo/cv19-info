@@ -16,7 +16,7 @@
 
 <nav class="navbar navbar-dark bg-dark">
     <div class="container">
-        <a href="index.php" class="navbar-brand">Artículos App - <?php echo $_SESSION['usuario'] ?></a>
+        <a href="index.php" class="navbar-brand">Artículos App </a>
     
     <ul class="navbar-nav ml-auto">
         <form class="form-inline my-2 my-lg-0">

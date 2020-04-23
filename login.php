@@ -11,8 +11,11 @@
 
         $count = mysqli_num_rows($result);
         if ($count == 1){
+            
             header("Location: inicio.php");
         }else{
+            $_SESSION['message'] = 'Credenciales incorrectas';
+            $_SESSION['message_type'] = 'danger';
             header("Location: index.php");
         }
 

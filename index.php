@@ -16,12 +16,18 @@ session_start();
             <h1 style="color: green; text-align: center">ARTÍCULOS</h1>
 
         <div class="row pt-5">
-
-
-            <div class="col-md-4">
-
+         <div class="col-md-4">
         </div>
             <div class="col-md-4">
+            <?php
+            if(isset($_SESSION['message'])){ ?>
+                <div class="alert alert-<?= $_SESSION['message_type'] ?> alert-dismissible fade show" role="alert">
+                    <?= $_SESSION['message']?>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <?php session_destroy(); } ?>
                     <form method="POST" action="login.php">
                             <div class="form-group">
                               <label for="exampleInputEmail1">Usuario</label>
@@ -34,13 +40,9 @@ session_start();
                             <button type="submit" class="btn btn-success btn-block" name="login" >Iniciar Sesión</button>
                           </form>
             </div>
-
             <div class="col-md-4">
 
                 </div>
-
-
-
 
         </div>
     </div>
