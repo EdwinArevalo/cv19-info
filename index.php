@@ -13,7 +13,7 @@ session_start();
     <div class="container my-4">
     </head>
     <body>
-            <h1 style="color: red; text-align: center">ARTÍCULOS</h1>
+            <h1 style="color: green; text-align: center">ARTÍCULOS</h1>
 
         <div class="row pt-5">
 
@@ -31,7 +31,7 @@ session_start();
                               <label for="exampleInputPassword1">Contraseña</label>
                               <input type="password" class="form-control" id="clave" name="clave" placeholder="Ingrese su contraseña" required>
                             </div>
-                            <button type="submit" class="btn btn-primary" name="login" >Iniciar Sesión</button>
+                            <button type="submit" class="btn btn-success btn-block" name="login" >Iniciar Sesión</button>
                           </form>
             </div>
 
