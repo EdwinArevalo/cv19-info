@@ -17,6 +17,6 @@ if(isset($_POST['guardar_articulo'])){
     $_SESSION['message'] = 'Articulo agregado satisfactoriamente';
     $_SESSION['message_type'] = 'success';
 
-    header("Location: index.php");
+    header("Location: inicio.php");
 }
 ?>

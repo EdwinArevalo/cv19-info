@@ -21,7 +21,7 @@
         mysqli_query($conn, $query);
         $_SESSION['message'] = 'Artículo actualizado satisfactoriamente';
         $_SESSION['message_type'] = 'warning';
-        header("Location: index.php");
+        header("Location: inicio.php");
 
     }
 

@@ -1,79 +1,50 @@
-<?php include('db.php');?>
-<?php include('includes/header.php');?>
-    
-<div class="container p-4">
-    <div class="row">
-        <div class="col-md-4">
+<?php
+session_start();
+ ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>App</title>
+    <link rel="icon" type="image/png" href="https://i.blogs.es/82a22b/fbca226b-3a49-4aa4-9351-31dd115780bb/450_1000.png" />
+    <link rel="stylesheet" href="https://bootswatch.com/4/journal/bootstrap.min.css">
+    <div class="container my-4">
 
-        <?php
-            if(isset($_SESSION['message'])){ ?>
+            <h1 style="color: red; text-align: center">ARTÍCULOS</h1>
 
-                <div class="alert alert-<?= $_SESSION['message_type'] ?> alert-dismissible fade show" role="alert">
-                    <?= $_SESSION['message']?>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+        <div class="row pt-5">
+
+
+            <div class="col-md-4">
+
+        </div>
+            <div class="col-md-4">
+                    <form method="POST" action="login.php">
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Usuario</label>
+                              <input type="text" class="form-control" id="usuario"  name="usuario" placeholder="Ingrese us usuario" required>
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleInputPassword1">Contraseña</label>
+                              <input type="password" class="form-control" id="clave" name="clave" placeholder="Ingrese su contraseña" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary" name="login" >Iniciar Sesión</button>
+                          </form>
+            </div>
+
+            <div class="col-md-4">
+
                 </div>
 
-            <?php session_unset(); } ?>
-
-            <div class="card card-body">
-                <form action="save.php" method="POST">
-                    <div class="form-group">
-                        <input type="text" name="nombre" class="form-control" placeholder="Nombre" required autofocus>
-                    </div>
-                    <div class="form-group">
-                        <input type="number" name="precio" class="form-control" placeholder="Precio" required autofocus>
-                    </div>
-                    <div class="form-group">
-                        <input type="number" name="stock" class="form-control" placeholder="Stock" required autofocus>
-                    </div>
-                    <input type="submit" class="btn btn-success btn-block" name="guardar_articulo" value="Guardar articulo">
-                </form>
-            </div>
-        </div>
 
 
-        <div class="col-md-8">
-        <div class="card my-4" id="articulo-resultado">
-        <div class="card-body">
-                <ul id="container"></ul>
-        </div>
-        <div>
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Precio</th>
-                        <th>Stock</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                
-                <tbody>
-                <?php
-                        $query = "SELECT * FROM articulos";
-                        $result = mysqli_query($conn, $query);
-                while($row = mysqli_fetch_array($result)){ ?>
-                    <tr>
-                        <td><?= $row['nombre'] ?></td>
-                        <td><?= $row['precio'] ?></td>
-                        <td><?= $row['stock'] ?></td>
-                        <td>
-                            <a href="edit.php?id=<?= $row['id']?>" class="btn btn-secondary"> <i class="fas fa-marker"></i> </a>
-                            <a href="remove.php?id=<?= $row['id']?>" class="btn btn-danger"> <i class="fas fa-calendar-times"></i> </a>
-                        </td>
-                    </tr>
 
-                <?php } ?>
-            
-                </tbody>
-            </table>
         </div>
     </div>
-</div>
-
-<?php include('includes/footer.php');?>
-
-
-   
+</head>
+<body>
+    
+</body>
+</html>
